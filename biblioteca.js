@@ -1,1 +1,1 @@
-console.log("Dificil ein campeao")
+console.log("Dificil ein camp")
