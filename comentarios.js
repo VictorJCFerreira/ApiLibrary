@@ -419,3 +419,5 @@ const displayUser = async () => {
 displayUser().catch(error => console.log(error))
 
 console.log("Oi sumido")
+
+console.log("Teste de Sync")
