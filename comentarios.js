@@ -417,6 +417,3 @@ const displayUser = async () => {
 } 
     
 displayUser().catch(error => console.log(error))
-
-
-console.log("Sai fora")
