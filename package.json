@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "readline-sync": "^1.4.10"
+  },
+  "name": "projeto_1",
+  "version": "1.0.0",
+  "description": "projeto api de biblioteca",
+  "main": "biblioteca.js",
+  "scripts": {
+    "start": "node biblioteca.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorJCFerreira/PJ_Projetos.git"
+  },
+  "keywords": [
+    "javascript;node"
+  ],
+  "author": "Victor Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorJCFerreira/PJ_Projetos/issues"
+  },
+  "homepage": "https://github.com/VictorJCFerreira/PJ_Projetos#readme"
+}
