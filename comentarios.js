@@ -381,13 +381,13 @@ bolo
 
 const login = (email, password) => {
     return new Promise ((resolve, reject) => {
-        const error = true
+        const error = false
         if (error){
             reject(new Error('erro no login'))
         }
     
-    console.log("usuario logado")
-    resolve({email})
+        console.log("usuario logado")
+        resolve({email})
     })
 };
     
@@ -404,16 +404,16 @@ const userVideoDetails = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log("Detalhes dos videos")
-            resolve({title: "TITULO_DO_VIDEO"})
+            resolve({title: "TITULO_DO_VIDEO", title2: "EU_ADORO_PROGRAMAR"})
         }, 2000)
     })
 };
     
-const displayUser = async () => {
-        const user = await login("victorferreira@gmail.com","12345")
-        const video = await userVideos(user.email)
-        const videodetails = await userVideoDetails(video[0])
-        console.log(videodetails)  
+async function displayUser()  {
+    const user = await login("victorferreira@gmail.com","12345")
+    const video = await userVideos(user.email)
+    const videodetails = await userVideoDetails()
+    console.log(videodetails.title2)    
 } 
     
 displayUser().catch(error => console.log(error))
