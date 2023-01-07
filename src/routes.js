@@ -9,5 +9,6 @@ router.get('/infos', LibraryControler.buscarTodos)
 router.get('/info/:codigo', LibraryControler.buscarID)
 router.post('/info', LibraryControler.adicionar)
 router.put('/info/:codigo', LibraryControler.alterar)
+router.delete('/info/:codigo', LibraryControler.excluir)
 
 module.exports = router

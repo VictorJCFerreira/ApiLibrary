@@ -1,8 +1,10 @@
 /*
     1- Chamar a conexão com o banco de dados
     2- Retornar uma Promessa para buscar todas as informações dos livros e artigos
-    3- Retornar uma Promessa para buscar o titulo e autor dos livros com base no id dele
-    4- Fazer uma Promise para enviar informações ao banco de dados
+    3- Retornar uma Promessa para buscar as informaçoes dos livros com base no ID
+    4- Retornar uma Promise para enviar informações ao banco de dados
+    5- Retornar uma promisse para alterar um livro pelo ID
+    6- Retornar uma promisse para excluir um livro pelo ID
 */
 const databank = require("../databank")
 
@@ -41,7 +43,6 @@ module.exports = {
         });
     },
 
-    //Alterar o Livro pelo ID
     alterar: (titulo, conteudo, autor, codigo) => {
         return new Promise ((aceito, rejeitado) => {
             databank.query(`UPDATE books SET  titulo = ?, conteudo = ?, autor = ? WHERE id_livro = ?`,
@@ -52,5 +53,14 @@ module.exports = {
                 }
             )
         });
+    },
+
+    excluir: (codigo) => {
+        return new Promise ((aceito, rejeitado) => {
+            databank.query(`DELETE FROM books WHERE id_livro = ?`,[codigo], (error, results) =>{
+                if(error){ rejeitado(error); return}
+                aceito(results)
+            })  
+        })
     }
 };

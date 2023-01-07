@@ -81,4 +81,14 @@ module.exports = {
 
         res.json(json)
     },
+
+    // Excluir dados
+    excluir: async(req,res) => {
+        let json = {error:``, result:{}}
+
+        await LibraryServices.excluir(req.params.codigo)
+
+        res.json(json)
+
+    }
 }
